@@ -1,4 +1,17 @@
 function OLS(LHV,RHV,m=0)
+    """
+    INPUT
+    LHV::Array = dependend variable
+    RHV::Array = Independend variable
+    m::Int = bandwidth in Newey-West 
+    OUTPUT
+    bhat::Array = Regression coefficients
+    sebv::Array = Newey-West Standard Errors
+    V:: Array = k x k covariance matrix of sqrt(T)betas
+    R2::Float = R2
+    R2::Float = R2 adjusted
+    """
+    
     if size(RHV,1) != size(LHV,1)
         sLHV = size(RHV)
         sRHV = size(LHV)
