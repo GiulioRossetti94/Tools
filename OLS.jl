@@ -15,7 +15,7 @@ function OLS(LHV,RHV,m=0)
     if size(RHV,1) != size(LHV,1)
         sLHV = size(RHV)
         sRHV = size(LHV)
-        println("OLS: Dimension mismatch. RHV and LHV must have the same number of rows. Current rows are $sLHV and $sRHV")
+        println("OLS: Dimensions mismatch. RHV and LHV must have the same number of rows. Current rows are $sLHV and $sRHV")
     end
     
     T = size(LHV,1)
